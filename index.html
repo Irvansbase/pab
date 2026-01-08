@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT Pertama Akun Bersama | Advertising & Marketing Agency</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Poppins', sans-serif; }
+        body { overflow-x: hidden; }
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=1920');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .city-bg {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1920');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        .nav-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #667eea;
+            transition: width 0.3s;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .mobile-menu.active {
+            max-height: 500px;
+        }
+        .portfolio-img {
+            transition: transform 0.5s ease;
+        }
+        .portfolio-card:hover .portfolio-img {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    
+    <!-- Navbar -->
+    <header class="fixed top-0 w-full z-50 bg-gray-900/95 backdrop-blur-sm shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-xl">PAB</span>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold">PT Pertama Akun Bersama</h1>
+                        <p class="text-xs text-gray-400">Advertising & Marketing</p>
+                    </div>
+                </div>
+                
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-gray-300 hover:text-white">Beranda</a>
+                    <a href="#about" class="nav-link text-gray-300 hover:text-white">Tentang</a>
+                    <a href="#services" class="nav-link text-gray-300 hover:text-white">Layanan</a>
+                    <a href="#portfolio" class="nav-link text-gray-300 hover:text-white">Portofolio</a>
+                    <a href="#team" class="nav-link text-gray-300 hover:text-white">Tim</a>
+                    <a href="#contact" class="nav-link text-gray-300 hover:text-white">Kontak</a>
+                </nav>
+                
+                <button id="mobile-menu-btn" class="md:hidden text-white text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <div id="mobile-menu" class="mobile-menu md:hidden mt-4">
+                <a href="#home" class="block py-2 text-gray-300 hover:text-white border-b border-gray-700">Beranda</a>
+                <a href="#about" class="block py-2 text-gray-300 hover:text-white border-b border-gray-700">Tentang</a>
+                <a href="#services" class="block py-2 text-gray-300 hover:text-white border-b border-gray-700">Layanan</a>
+                <a href="#portfolio" class="block py-2 text-gray-300 hover:text-white border-b border-gray-700">Portofolio</a>
+                <a href="#team" class="block py-2 text-gray-300 hover:text-white border-b border-gray-700">Tim</a>
+                <a href="#contact" class="block py-2 text-gray-300 hover:text-white">Kontak</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-screen flex items-center pt-20">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-left">
+                    <h2 class="text-5xl md:text-7xl font-bold mb-6">
+                        Transform Your <span class="gradient-text">Brand Story</span>
+                    </h2>
+                    <p class="text-xl text-gray-300 mb-8">
+                        Kami adalah agensi periklanan dan marketing yang menghadirkan solusi kreatif untuk mengangkat brand Anda ke level berikutnya.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#contact" class="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg font-semibold hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                            Mulai Konsultasi
+                        </a>
+                        <a href="#portfolio" class="px-8 py-4 bg-white/10 backdrop-blur-sm rounded-lg font-semibold hover:bg-white/20 transition-all duration-300">
+                            Lihat Portfolio
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:block animate-float">
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600" alt="Team" class="rounded-2xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    Tentang <span class="gradient-text">Kami</span>
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    PT Pertama Akun Bersama adalah agensi periklanan dan marketing terpercaya yang telah melayani berbagai klien dari berbagai industri.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800" alt="Office" class="rounded-2xl shadow-2xl">
+                </div>
+                <div>
+                    <h3 class="text-3xl font-bold mb-6">Mengapa Memilih Kami?</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-trophy text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold mb-2">Pengalaman Terbukti</h4>
+                                <p class="text-gray-400">Lebih dari 10 tahun pengalaman dalam industri advertising dan marketing dengan hasil yang terukur.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-lightbulb text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold mb-2">Kreativitas Tanpa Batas</h4>
+                                <p class="text-gray-400">Tim kreatif kami selalu menghadirkan ide-ide segar dan inovatif untuk setiap kampanye.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-chart-line text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold mb-2">Hasil Terukur</h4>
+                                <p class="text-gray-400">Setiap kampanye kami dirancang dengan target yang jelas dan hasil yang dapat diukur.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="city-bg py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    Layanan <span class="gradient-text">Kami</span>
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Solusi lengkap untuk kebutuhan advertising dan marketing bisnis Anda
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl card-hover">
+                    <div class="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-bullhorn text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Digital Advertising</h3>
+                    <p class="text-gray-400 mb-6">Kampanye iklan digital yang tepat sasaran di berbagai platform seperti Google Ads, Facebook Ads, dan Instagram Ads.</p>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Google Ads Management</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Social Media Advertising</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Display Advertising</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl card-hover">
+                    <div class="w-16 h-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-palette text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Brand Identity</h3>
+                    <p class="text-gray-400 mb-6">Membangun identitas brand yang kuat dan memorable untuk bisnis Anda.</p>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Logo Design</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Brand Guidelines</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Visual Identity</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl card-hover">
+                    <div class="w-16 h-16 bg-gradient-to-r from-cyan-600 to-green-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-share-nodes text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Social Media Marketing</h3>
+                    <p class="text-gray-400 mb-6">Strategi media sosial yang efektif untuk meningkatkan engagement dan brand awareness.</p>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Content Strategy</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Community Management</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Influencer Marketing</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl card-hover">
+                    <div class="w-16 h-16 bg-gradient-to-r from-green-600 to-yellow-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-video text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Video Production</h3>
+                    <p class="text-gray-400 mb-6">Produksi video berkualitas tinggi untuk berbagai kebutuhan marketing Anda.</p>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Commercial Videos</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Corporate Videos</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Social Media Content</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl card-hover">
+                    <div class="w-16 h-16 bg-gradient-to-r from-yellow-600 to-red-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-search text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">SEO & SEM</h3>
+                    <p class="text-gray-400 mb-6">Optimasi mesin pencari untuk meningkatkan visibility dan traffic website Anda.</p>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> On-Page SEO</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Off-Page SEO</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Technical SEO</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl card-hover">
+                    <div class="w-16 h-16 bg-gradient-to-r from-red-600 to-pink-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-bar text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Analytics & Reporting</h3>
+                    <p class="text-gray-400 mb-6">Analisis mendalam dan laporan komprehensif untuk mengukur performa kampanye.</p>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Campaign Analytics</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> ROI Tracking</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Custom Reports</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    Portofolio <span class="gradient-text">Kami</span>
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Beberapa proyek sukses yang telah kami kerjakan untuk klien-klien terpercaya
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="portfolio-card group relative overflow-hidden rounded-2xl cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600" alt="Project 1" class="portfolio-img w-full h-80 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2">Brand Campaign</h3>
+                            <p class="text-gray-300">Digital advertising campaign untuk startup teknologi</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card group relative overflow-hidden rounded-2xl cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600" alt="Project 2" class="portfolio-img w-full h-80 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2">Social Media Strategy</h3>
+                            <p class="text-gray-300">Comprehensive social media management untuk brand fashion</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card group relative overflow-hidden rounded-2xl cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600" alt="Project 3" class="portfolio-img w-full h-80 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2">Video Production</h3>
+                            <p class="text-gray-300">Commercial video production untuk produk F&B</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card group relative overflow-hidden rounded-2xl cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=600" alt="Project 4" class="portfolio-img w-full h-80 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2">Rebranding Project</h3>
+                            <p class="text-gray-300">Complete brand identity redesign untuk perusahaan retail</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card group relative overflow-hidden rounded-2xl cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600" alt="Project 5" class="portfolio-img w-full h-80 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2">SEO Optimization</h3>
+                            <p class="text-gray-300">SEO & SEM strategy untuk e-commerce platform</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card group relative overflow-hidden rounded-2xl cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=600" alt="Project 6" class="portfolio-img w-full h-80 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2">Event Marketing</h3>
+                            <p class="text-gray-300">Integrated marketing campaign untuk corporate event</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="city-bg py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    Tim <span class="gradient-text">Profesional</span>
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Bertemu dengan para ahli yang akan membantu mewujudkan visi brand Anda
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="bg-gray-800/50 backdrop-blur-sm rounded-2xl overflow-hidden card-hover">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400" alt="CEO" class="w-full h-64 object-cover">
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold mb-2">Budi Santoso</h3>
+                        <p class="text-purple-400 mb-4">CEO & Founder</p>
+                        <div class="flex justify-center space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-sm rounded-2xl overflow-hidden card-hover">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400" alt="Creative Director" class="w-full h-64 object-cover">
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold mb-2">Siti Nurhaliza</h3>
+                        <p class="text-purple-400 mb-4">Creative Director</p>
+                        <div class="flex justify-center space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-sm rounded-2xl overflow-hidden card-hover">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400" alt="Marketing Manager" class="w-full h-64 object-cover">
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold mb-2">Ahmad Rizaldi</h3>
+                        <p class="text-purple-400 mb-4">Marketing Manager</p>
+                        <div class="flex justify-center space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-sm rounded-2xl overflow-hidden card-hover">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400" alt="Account Manager" class="w-full h-64 object-cover">
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold mb-2">Dewi Lestari</h3>
+                        <p class="text-purple-400 mb-4">Account Manager</p>
+                        <div class="flex justify-center space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    Hubungi <span class="gradient-text">Kami</span>
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Mari diskusikan bagaimana kami dapat membantu mengembangkan bisnis Anda
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Informasi Kontak</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Alamat</h4>
+                                <p class="text-gray-400">Karangwaru Kidul TR 2/457, Kel. Karangwaru<br>Kec. Tegalrejo, Kota Yogyakarta<br>D.I. Yogyakarta 55241</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Telepon</h4>
+                                <p class="text-gray-400">088226637173</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Email</h4>
+                                <p class="text-gray-400">pertamaakunbersama@yopmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-yellow-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Jam Operasional</h4>
+                                <p class="text-gray-400">Senin - Jumat: 09:00 - 18:00<br>Sabtu: 09:00 - 14:00</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-semibold mb-4">Ikuti Kami</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-purple-600 transition">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-purple-600 transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-purple-600 transition">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-purple-600 transition">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-700/50 backdrop-blur-sm p-8 rounded-2xl">
+                    <form id="contact-form">
+                        <div class="mb-6">
+                            <label class="block text-sm font-semibold mb-2">Nama Lengkap</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:border-purple-500 transition text-white" placeholder="Masukkan nama Anda" required>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-sm font-semibold mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:border-purple-500 transition text-white" placeholder="email@example.com" required>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-sm font-semibold mb-2">Nomor Telepon</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:border-purple-500 transition text-white" placeholder="08xxxxxxxxxx" required>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-sm font-semibold mb-2">Layanan yang Diminati</label>
+                            <select id="service" class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:border-purple-500 transition text-white" required>
+                                <option value="">Pilih layanan</option>
+                                <option value="digital-advertising">Digital Advertising</option>
+                                <option value="brand-identity">Brand Identity</option>
+                                <option value="social-media">Social Media Marketing</option>
+                                <option value="video-production">Video Production</option>
+                                <option value="seo-sem">SEO & SEM</option>
+                                <option value="analytics">Analytics & Reporting</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-sm font-semibold mb-2">Pesan</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:border-purple-500 transition text-white" placeholder="Ceritakan tentang proyek Anda..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg font-semibold hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                            Kirim Pesan
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12 border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">PAB</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold">PT Pertama Akun Bersama</h3>
+                            <p class="text-xs text-gray-400">Advertising & Marketing</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm">Transforming brands through creative advertising and strategic marketing solutions.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Layanan</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#services" class="hover:text-white transition">Digital Advertising</a></li>
+                        <li><a href="#services" class="hover:text-white transition">Brand Identity</a></li>
+                        <li><a href="#services" class="hover:text-white transition">Social Media</a></li>
+                        <li><a href="#services" class="hover:text-white transition">Video Production</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Perusahaan</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#about" class="hover:text-white transition">Tentang Kami</a></li>
+                        <li><a href="#portfolio" class="hover:text-white transition">Portofolio</a></li>
+                        <li><a href="#team" class="hover:text-white transition">Tim Kami</a></li>
+                        <li><a href="#contact" class="hover:text-white transition">Kontak</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 text-sm mb-4">Dapatkan update terbaru tentang tips marketing dan promos.</p>
+                    <form id="newsletter-form" class="flex">
+                        <input type="email" id="newsletter-email" placeholder="Email Anda" class="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-l-lg focus:outline-none focus:border-purple-500 text-sm text-white" required>
+                        <button type="submit" class="px-4 py-2 bg-purple-600 rounded-r-lg hover:bg-purple-700 transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2024 PT Pertama Akun Bersama. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('active');
+            const icon = this.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Close mobile menu when clicking menu items
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('mobile-menu');
+                const btn = document.getElementById('mobile-menu-btn');
+                menu.classList.remove('active');
+                btn.querySelector('i').classList.add('fa-bars');
+                btn.querySelector('i').classList.remove('fa-times');
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.background = 'rgba(17, 24, 39, 0.98)';
+            } else {
+                header.style.background = 'rgba(17, 24, 39, 0.95)';
+            }
+        });
+
+        // Contact Form Submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value;
+            
+            const serviceName = {
+                'digital-advertising': 'Digital Advertising',
+                'brand-identity': 'Brand Identity',
+                'social-media': 'Social Media Marketing',
+                'video-production': 'Video Production',
+                'seo-sem': 'SEO & SEM',
+                'analytics': 'Analytics & Reporting'
+            };
+            
+            alert('Terima kasih ' + name + '!\n\nPesan Anda telah kami terima. Tim kami akan segera menghubungi Anda melalui:\nEmail: ' + email + '\nTelepon: ' + phone + '\n\nLayanan yang diminati: ' + serviceName[service]);
+            
+            this.reset();
+        });
+
+        // Newsletter Form Submission
+        document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('newsletter-email').value;
+            
+            alert('Terima kasih!\n\nAnda telah berlangganan newsletter kami di ' + email + '. Anda akan menerima update terbaru dari PT Pertama Akun Bersama.');
+            
+            this.reset();
+        });
+
+        // Smooth scroll for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add click handlers for social media links
+        document.querySelectorAll('a[href="#"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                if (this.querySelector('i').classList.contains('fa-facebook-f')) {
+                    alert('Facebook: Halaman Facebook PT Pertama Akun Bersama');
+                } else if (this.querySelector('i').classList.contains('fa-instagram')) {
+                    alert('Instagram: @pertamaakunbersama');
+                } else if (this.querySelector('i').classList.contains('fa-linkedin-in')) {
+                    alert('LinkedIn: PT Pertama Akun Bersama');
+                } else if (this.querySelector('i').classList.contains('fa-twitter')) {
+                    alert('Twitter: @pertamaakunbersama');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
